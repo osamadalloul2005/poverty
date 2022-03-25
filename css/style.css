@@ -1,0 +1,396 @@
+/* Font Awsome Import */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Montserrat:wght@300&family=Tajawal:wght@300;400;500;800&display=swap');
+
+/*FONTS:
+font-family: 'Cairo', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Tajawal', sans-serif;
+
+*/
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(0,0,0,.8);
+  text-align: center;
+  padding: 10px;
+  transition: .5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+/* NavBar */
+.navbar .navbar-brand {
+  padding-right: 20px;
+}
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar-nav li {
+  padding: 0 25px;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: red;
+}
+/* Media Navbar */
+@media screen and (max-width:576px)
+{
+  .navbar .navbar-toggler {
+    margin-left:25px;
+  }
+}
+/* Carousel --------------------------*/
+.carousel-inner {
+  position: relative;
+}
+.carousel-inner .carousel-caption {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.carousel-inner .carousel-caption h5 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+  background-color: rgba(0,0,0,.6);
+  border-radius: 15px;
+  padding: 15px;
+}
+.carousel-inner .carousel-caption p {
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+
+}
+ .carousel-indicators {
+  bottom: 100px;
+ }
+.carousel-indicators .active {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: tomato;
+}
+.carousel-indicators .silde-pg {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.carousel-control-prev .carousel-control-prev-icon {
+  background-color: rgba(0,0,0,.9);
+}
+.carousel-control-next .carousel-control-next-icon {
+  background-color: rgba(0,0,0,.9);
+}
+
+@media screen and (max-width:576px){
+ .carousel-indicators {
+  bottom: 0px;
+ }
+  .carousel-inner .carousel-caption{
+     margin-top: -12px;
+  }
+  .carousel-inner .carousel-caption h5{
+     font-size: .8rem;
+     
+  }
+ .carousel-inner .carousel-caption p{
+     font-size:8px;
+     font-weight: bold;
+  } 
+}
+/* About */
+.about h1 {
+  text-align: center;
+  margin: 40px;
+  font-weight: bold;
+}
+.about .container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "about-content about-img";
+  background-color: #e8e7e7;
+  padding: 40px;
+  gap: 10px;
+}
+
+   .about-content {
+  grid-area: about-content;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+.about .about-content h3 {
+  font-weight: bold;
+}
+.about .about-content p {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.5rem;
+}
+.about-img {
+  grid-area: about-img;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+.about-img img {
+  margin-top: 1px;
+}
+   /* Media---- */ 
+   @media screen and (max-width:576px)
+   {
+     .about .container{
+      grid-template-columns: 1fr;
+       grid-template-areas:
+       "about-content"
+       "about-img";
+     }
+     .about-content{
+        text-align: center;
+     }
+   }
+/* Gallery------------------------ */
+.gallery {
+  margin-top: 40px;
+}
+.gallery h1 {
+  text-align: center;
+  margin: 40px;
+  font-weight: bold;
+}
+.gallery .gal-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-areas:
+  "gal-img1 gal-img2 gal-img3 gal-img4"
+  "gal-img5 gal-img6 gal-img7 gal-img8";
+  gap: 15px;
+}
+/* Image-1 --------*/
+.gallery .gal-container .gal-img1 {
+  grid-area: gal-img1;
+  box-shadow: 0 0 10px #252525;
+  overflow: hidden;
+  position: relative;
+}
+.gallery .gal-container .gal-img1 span {
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+}
+.gallery .gal-container .gal-img1:hover .overlay {
+  top: 50%;
+}
+.gallery .gal-container .gal-img1:hover img {
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+/* Image-2 --------*/
+.gallery .gal-container .gal-img2 {
+  grid-area: gal-img2;
+  box-shadow: 0 0 15px #252525;
+  overflow: hidden;
+  position: relative;
+}
+.gallery .gal-container .gal-img2 span {
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+}
+.gallery .gal-container .gal-img2:hover .overlay {
+  top: 50%;
+}
+.gallery .gal-container .gal-img2:hover img {
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+/* Image-3 --------*/
+.gallery .gal-container .gal-img3 {
+  grid-area: gal-img3;
+  box-shadow: 0 0 15px #252525;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .gal-container .gal-img3 span {
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+}
+.gallery .gal-container .gal-img3:hover .overlay {
+  top: 50%;
+}
+.gallery .gal-container .gal-img3:hover img {
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+/* Image-4 --------*/
+.gallery .gal-container .gal-img4 {
+  grid-area: gal-img4;
+  box-shadow: 0 0 15px #252525;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .gal-container .gal-img4 span {
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+}
+.gallery .gal-container .gal-img4:hover .overlay {
+  top: 50%;
+}
+.gallery .gal-container .gal-img4:hover img {
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+/* Image-5 --------*/
+.gallery .gal-container .gal-img5 {
+  grid-area: gal-img5;
+  box-shadow: 0 0 15px #252525;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .gal-container .gal-img5 span {
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+}
+.gallery .gal-container .gal-img5:hover .overlay {
+  top: 50%;
+}
+.gallery .gal-container .gal-img5:hover img {
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+/* Image-6 --------*/
+.gallery .gal-container .gal-img6 {
+  grid-area: gal-img6;
+  box-shadow: 0 0 15px #252525;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .gal-container .gal-img6 span {
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+}
+.gallery .gal-container .gal-img6:hover .overlay {
+  top: 50%;
+}
+.gallery .gal-container .gal-img6:hover img {
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+/* Image-7 --------*/
+.gallery .gal-container .gal-img7 {
+  grid-area: gal-img7;
+  box-shadow: 0 0 15px #252525;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .gal-container .gal-img7 span {
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+}
+.gallery .gal-container .gal-img7:hover .overlay {
+  top: 50%;
+}
+.gallery .gal-container .gal-img7:hover img {
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+/* Image-8 --------*/
+.gallery .gal-container .gal-img8 {
+  grid-area: gal-img8;
+  box-shadow: 0 0 15px #252525;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .gal-container .gal-img8 span {
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+}
+.gallery .gal-container .gal-img8:hover .overlay {
+  top: 50%;
+}
+.gallery .gal-container .gal-img8:hover img {
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+   /*  Media Gallery */
+   @media screen and (max-width:576px)
+   {
+      .gallery .gal-container{
+       grid-template-columns:1fr;
+       grid-template-areas:
+       "gal-img1"
+       "gal-img2"
+       "gal-img3"
+       "gal-img4"
+       "gal-img5"
+       "gal-img6"
+       "gal-img7"
+       "gal-img8"
+       ;
+       padding: 25px;
+      }
+      
+   }
+  
+/* Card --------------------*/
+.pov-card h1 {
+  text-align: center;
+  margin: 40px;
+  font-weight: bold;
+  font-family: 'Tajawal', sans-serif;
+}
+  @media screen and (max-width:576px)
+   {
+      .card{
+         width: 20rem !important;
+         margin: 10px auto;
+         box-shadow: 0 0 15px #252525;
+      }
+   }
+/* footer -------------------*/
+footer
+{
+  grid-area: footer;
+  background-color: #000;
+
+}
+footer p {
+  padding: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+  @media screen and (max-width:576px){
+     footer p{
+        font-size: .8rem;
+     }
+  }
